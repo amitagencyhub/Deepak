@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepak Bhai VIP</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '790422663845478');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=790422663845478&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#0b0618;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:#fff;
+}
+
+.card{
+width:350px;
+padding:25px;
+border-radius:20px;
+background:linear-gradient(145deg,#0e0825,#070312);
+box-shadow:0 0 25px rgba(128,0,255,0.4);
+text-align:center;
+}
+
+.top-text a{
+color:#8a6cff;
+font-size:12px;
+letter-spacing:2px;
+text-decoration:none;
+}
+
+.main-title{
+font-size:34px;
+font-weight:900;
+margin-top:15px;
+color:#fff;
+text-shadow:0 0 15px #a855f7;
+}
+
+.vip{
+font-size:26px;
+font-weight:bold;
+color:#a855f7;
+margin-bottom:20px;
+text-shadow:0 0 10px #a855f7;
+}
+
+.timer{
+font-size:50px;
+font-weight:bold;
+color:#a855f7;
+margin:20px 0;
+text-shadow:0 0 20px #a855f7;
+}
+
+.sub{
+font-size:12px;
+color:#aaa;
+margin-bottom:25px;
+letter-spacing:1px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+border-radius:12px;
+background:linear-gradient(90deg,#9333ea,#a855f7);
+color:#fff;
+font-weight:bold;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.footer{
+font-size:10px;
+color:#777;
+margin-top:20px;
+letter-spacing:1px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<div class="top-text">
+<a href="https://t.me/+KPgRtEmEvtNhNDdl" target="_blank">
+ADS BY @AMIT ADS AGENCY
+</a>
+</div>
+
+<div class="main-title">DEEPAK BHAI</div>
+<div class="vip">VIP</div>
+
+<div class="timer" id="timer">60</div>
+
+<div class="sub">● ANALYZING VIP MARKET PATTERNS</div>
+
+<a href="https://t.me/+qjU5DCmjwG83NDVl" target="_blank" class="btn" onclick="fbq('track','Lead')">
+JOIN NOW FREE
+</a>
+
+<div class="footer">PROTOCOL SECURE • AMIT ADS AGENCY</div>
+
+</div>
+
+<script>
+let time = 60;
+let timerElement = document.getElementById("timer");
+
+let countdown = setInterval(() => {
+time--;
+timerElement.innerText = time;
+
+if(time <= 0){
+clearInterval(countdown);
+fbq('track','Lead'); // Track redirect conversion
+window.location.href = "https://t.me/+qjU5DCmjwG83NDVl";
+}
+}, 1000);
+</script>
+
+</body>
+</html>
