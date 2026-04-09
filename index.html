@@ -24,92 +24,108 @@ fbq('track', 'PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=790422663845478&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
 
-<!-- Google Font -->
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-  background:#000;
-  color:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  text-align:center;
+background:#000;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+overflow:hidden;
 }
 
-.container{
-  padding:20px;
-}
+.container{padding:20px;}
 
 h1{
-  font-size:30px;
-  font-weight:900;
-  margin-bottom:15px;
-  background:linear-gradient(45deg,#00c6ff,#8a2be2,#ff00ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  letter-spacing:1px;
+font-size:32px;
+font-weight:900;
+margin-bottom:10px;
+background:linear-gradient(45deg,#00c6ff,#8a2be2,#ff00ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation: glow 2s infinite alternate;
 }
 
-p{
-  font-size:17px;
-  font-weight:700;
-  margin-bottom:25px;
-  color:#ccc;
+@keyframes glow{
+from{text-shadow:0 0 10px #8a2be2;}
+to{text-shadow:0 0 25px #ff00ff;}
+}
+
+p{font-size:17px;font-weight:700;margin-bottom:10px;color:#ccc;}
+
+.live{
+color:#00ffcc;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.blink{
+color:#ff4444;
+font-weight:700;
+animation: blink 1s infinite;
+margin-bottom:15px;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+.timer{
+font-size:18px;
+margin-bottom:15px;
+color:#ffd700;
+font-weight:700;
 }
 
 .btn{
-  display:block;
-  width:240px;
-  margin:12px auto;
-  padding:14px;
-  border:none;
-  border-radius:10px;
-  font-size:17px;
-  font-weight:700;
-  color:#fff;
-  cursor:pointer;
-  text-decoration:none;
-  background:linear-gradient(45deg,#007bff,#8a2be2);
-  box-shadow:0 0 10px rgba(138,43,226,0.6);
-  transition:0.3s;
+display:block;
+width:250px;
+margin:12px auto;
+padding:14px;
+border-radius:10px;
+font-size:17px;
+font-weight:700;
+color:#fff;
+text-decoration:none;
+background:linear-gradient(45deg,#007bff,#8a2be2);
+box-shadow:0 0 10px rgba(138,43,226,0.6);
+transition:0.3s;
 }
 
 .btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 20px rgba(138,43,226,1);
+transform:scale(1.08);
+box-shadow:0 0 25px rgba(138,43,226,1);
 }
 
 .footer{
-  margin-top:20px;
-  font-size:14px;
-  color:#aaa;
-  font-weight:600;
+margin-top:15px;
+font-size:14px;
+color:#aaa;
 }
 
 .footer a{
-  color:#8a2be2;
-  text-decoration:none;
+color:#8a2be2;
+text-decoration:none;
 }
 </style>
 
-<!-- BUTTON TRACKING SCRIPT -->
+<!-- TRACKING -->
 <script>
 function trackAndRedirect(url){
-  fbq('track', 'Lead'); // Lead event tracking
+  fbq('track', 'Lead', {}, {eventID: 'lead_' + Date.now()});
   setTimeout(function(){
     window.location.href = url;
-  }, 300); // slight delay to ensure tracking fires
+  }, 800);
 }
 </script>
 
@@ -118,25 +134,51 @@ function trackAndRedirect(url){
 <body>
 
 <div class="container">
-  <h1>BDG WIN NUMBER SURE SHOTS</h1>
-  
-  <p>Tap to join the official Telegram channel</p>
 
-  <!-- BUTTONS WITH TRACKING -->
-  <a href="#" onclick="trackAndRedirect('https://t.me/+qjU5DCmjwG83NDVl')" class="btn">
-    Join Telegram Channel
-  </a>
-  
-  <a href="#" onclick="trackAndRedirect('https://t.me/+qjU5DCmjwG83NDVl')" class="btn">
-    Join Telegram Channel
-  </a>
+<h1>BDG WIN NUMBER SURE SHOTS</h1>
 
-  <div class="footer">
-    <a href="https://t.me/+KPgRtEmEvtNhNDdl">
-      Ad Setup by @Amit Ads Agency
-    </a>
-  </div>
+<p>Tap to join the official Telegram channel</p>
+
+<div class="live" id="liveUsers">🔥 120 people watching now</div>
+
+<div class="blink">⚠️ Limited Slots Available</div>
+
+<div class="timer">⏳ Redirect in <span id="count">30</span>s</div>
+
+<a href="javascript:void(0)" onclick="trackAndRedirect('https://t.me/+qjU5DCmjwG83NDVl')" class="btn">
+Join Telegram Channel
+</a>
+
+<a href="javascript:void(0)" onclick="trackAndRedirect('https://t.me/+qjU5DCmjwG83NDVl')" class="btn">
+Join Telegram Channel
+</a>
+
+<div class="footer">
+<a href="https://t.me/+KPgRtEmEvtNhNDdl">Ad Setup by @Amit Ads Agency</a>
 </div>
+
+</div>
+
+<!-- LIVE USERS RANDOM -->
+<script>
+setInterval(()=>{
+  let users = Math.floor(Math.random()*50)+100;
+  document.getElementById("liveUsers").innerText = "🔥 "+users+" people watching now";
+},3000);
+</script>
+
+<!-- COUNTDOWN + AUTO REDIRECT -->
+<script>
+let time = 30;
+let countdown = setInterval(()=>{
+  time--;
+  document.getElementById("count").innerText = time;
+  if(time <= 0){
+    clearInterval(countdown);
+    window.location.href = "https://t.me/+qjU5DCmjwG83NDVl";
+  }
+},1000);
+</script>
 
 </body>
 </html>
